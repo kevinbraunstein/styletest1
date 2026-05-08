@@ -6,7 +6,11 @@
 </head>
 <body>
 <script>
+  let cycle = 0;
+
   function run() {
+    cycle++;
+
     const existing = document.getElementById('box');
     if (existing) existing.remove();
 
@@ -16,7 +20,7 @@
 
     el.style.width           = '200px';
     el.style.height          = '100px';
-    el.style.backgroundColor = 'crimson';
+    el.style.backgroundColor = cycle % 2 === 1 ? 'crimson' : 'steelblue';
     el.style.borderRadius    = '8px';
     el.style.opacity         = '0.9';
   }
