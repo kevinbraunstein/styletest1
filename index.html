@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Style Test 1</title>
+</head>
+<body>
+<script>
+  function run() {
+    const existing = document.getElementById('box');
+    if (existing) existing.remove();
+
+    const el = document.createElement('div');
+    el.id = 'box';
+    document.body.appendChild(el);
+
+    el.style.width           = '200px';
+    el.style.height          = '100px';
+    el.style.backgroundColor = 'crimson';
+    el.style.borderRadius    = '8px';
+    el.style.opacity         = '0.9';
+  }
+
+  run();
+  setInterval(run, 30000);
+</script>
+</body>
+</html>
